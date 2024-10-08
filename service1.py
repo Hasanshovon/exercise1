@@ -26,7 +26,7 @@ def get_system_info():
         "uptime": uptime
     }
 
-@app.route('/service1', methods=['GET'])
+@app.route('/', methods=['GET'])
 def service1_info():
     # Get information from Service2
     service2_info = requests.get('http://service2:5001/service2').json()
