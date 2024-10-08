@@ -1,0 +1,229 @@
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/04 - Networking container communication/004 case 3 container to container$ ls
+app.js  Dockerfile  models  package.json
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/04 - Networking container communication/004 case 3 container to container$ cd ..
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/04 - Networking container communication$ ls
+'004 case 3 container to container'   image-2.png   image-4.png   image-6.png   README.md
+ image-1.png                          image-3.png   image-5.png   image.png
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/04 - Networking container communication$ cd ..
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes$ ls
+'02 - Docker Images & Containers The Core Building Blocks'   README.md
+'04 - Networking container communication'                   'weekly task'
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes$ cd weekly\ task/
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/weekly task$ cd week\ 7/
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/weekly task/week 7$ ls
+docker-compose.yaml  Dockerfile-service2  service1.py
+Dockerfile-service1  README.md            service2.go
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/weekly task/week 7$ docker-compose up --build
+Command 'docker-compose' not found, but can be installed with:
+sudo snap install docker          # version 24.0.5, or
+sudo apt  install docker-compose  # version 1.29.2-1
+See 'snap info docker' for additional versions.
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/weekly task/week 7$ sudo apt-get install docker-compose
+[sudo] password for tanvir: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libatomic1:i386 libbsd0:i386 libdrm-amdgpu1:i386 libdrm-intel1:i386 libdrm-nouveau2:i386
+  libdrm-radeon1:i386 libdrm2:i386 libedit2:i386 libelf1:i386 libexpat1:i386 libffi8:i386
+  libgl1:i386 libgl1-mesa-dri:i386 libglapi-mesa:i386 libglvnd0:i386 libglx-mesa0:i386
+  libglx0:i386 libicu70:i386 libllvm15:i386 libmd0:i386 libpciaccess0:i386 libsensors5:i386
+  libstdc++6:i386 libx11-6:i386 libx11-xcb1:i386 libxau6:i386 libxcb-dri2-0:i386
+  libxcb-dri3-0:i386 libxcb-glx0:i386 libxcb-present0:i386 libxcb-randr0:i386 libxcb-shm0:i386
+  libxcb-sync1:i386 libxcb-xfixes0:i386 libxcb1:i386 libxdmcp6:i386 libxext6:i386
+  libxfixes3:i386 libxml2:i386 libxshmfence1:i386 libxxf86vm1:i386
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  python3-docker python3-dockerpty python3-docopt python3-dotenv python3-jsonschema
+  python3-pyrsistent python3-texttable python3-websocket
+Suggested packages:
+  python-jsonschema-doc
+The following NEW packages will be installed:
+  docker-compose python3-docker python3-dockerpty python3-docopt python3-dotenv
+  python3-jsonschema python3-pyrsistent python3-texttable python3-websocket
+0 upgraded, 9 newly installed, 0 to remove and 150 not upgraded.
+Need to get 388 kB of archives.
+After this operation, 2,065 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://fi.archive.ubuntu.com/ubuntu jammy/universe amd64 python3-websocket all 1.2.3-1 [34.7 kB]
+Get:2 http://fi.archive.ubuntu.com/ubuntu jammy/universe amd64 python3-docker all 5.0.3-1 [89.3 kB]
+Get:3 http://fi.archive.ubuntu.com/ubuntu jammy/universe amd64 python3-dockerpty all 0.4.1-2 [11.1 kB]
+Get:4 http://fi.archive.ubuntu.com/ubuntu jammy/universe amd64 python3-docopt all 0.6.2-4 [26.9 kB]
+Get:5 http://fi.archive.ubuntu.com/ubuntu jammy/universe amd64 python3-dotenv all 0.19.2-1 [20.5 kB]
+Get:6 http://fi.archive.ubuntu.com/ubuntu jammy/main amd64 python3-pyrsistent amd64 0.18.1-1build1 [55.5 kB]
+Get:7 http://fi.archive.ubuntu.com/ubuntu jammy/main amd64 python3-jsonschema all 3.2.0-0ubuntu2 [43.1 kB]
+Get:8 http://fi.archive.ubuntu.com/ubuntu jammy/universe amd64 python3-texttable all 1.6.4-1 [11.4 kB]
+Get:9 http://fi.archive.ubuntu.com/ubuntu jammy/universe amd64 docker-compose all 1.29.2-1 [95.8 kB]
+Fetched 388 kB in 0s (1,513 kB/s)         
+Selecting previously unselected package python3-websocket.
+(Reading database ... 339288 files and directories currently installed.)
+Preparing to unpack .../0-python3-websocket_1.2.3-1_all.deb ...
+Unpacking python3-websocket (1.2.3-1) ...
+Selecting previously unselected package python3-docker.
+Preparing to unpack .../1-python3-docker_5.0.3-1_all.deb ...
+Unpacking python3-docker (5.0.3-1) ...
+Selecting previously unselected package python3-dockerpty.
+Preparing to unpack .../2-python3-dockerpty_0.4.1-2_all.deb ...
+Unpacking python3-dockerpty (0.4.1-2) ...
+Selecting previously unselected package python3-docopt.
+Preparing to unpack .../3-python3-docopt_0.6.2-4_all.deb ...
+Unpacking python3-docopt (0.6.2-4) ...
+Selecting previously unselected package python3-dotenv.
+Preparing to unpack .../4-python3-dotenv_0.19.2-1_all.deb ...
+Unpacking python3-dotenv (0.19.2-1) ...
+Selecting previously unselected package python3-pyrsistent:amd64.
+Preparing to unpack .../5-python3-pyrsistent_0.18.1-1build1_amd64.deb ...
+Unpacking python3-pyrsistent:amd64 (0.18.1-1build1) ...
+Selecting previously unselected package python3-jsonschema.
+Preparing to unpack .../6-python3-jsonschema_3.2.0-0ubuntu2_all.deb ...
+Unpacking python3-jsonschema (3.2.0-0ubuntu2) ...
+Selecting previously unselected package python3-texttable.
+Preparing to unpack .../7-python3-texttable_1.6.4-1_all.deb ...
+Unpacking python3-texttable (1.6.4-1) ...
+Selecting previously unselected package docker-compose.
+Preparing to unpack .../8-docker-compose_1.29.2-1_all.deb ...
+Unpacking docker-compose (1.29.2-1) ...
+Setting up python3-dotenv (0.19.2-1) ...
+Setting up python3-texttable (1.6.4-1) ...
+Setting up python3-docopt (0.6.2-4) ...
+Setting up python3-pyrsistent:amd64 (0.18.1-1build1) ...
+Setting up python3-websocket (1.2.3-1) ...
+Setting up python3-dockerpty (0.4.1-2) ...
+Setting up python3-docker (5.0.3-1) ...
+Setting up python3-jsonschema (3.2.0-0ubuntu2) ...
+Setting up docker-compose (1.29.2-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes/weekly task/week 7$ docker-compose up --build
+Creating network "week7_default" with the default driver
+Building service2
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon   12.8kB
+Step 1/6 : FROM golang:1.18
+1.18: Pulling from library/golang
+bbeef03cda1f: Pull complete 
+f049f75f014e: Pull complete 
+56261d0e6b05: Pull complete 
+9bd150679dbd: Pull complete 
+bfcb68b5bd10: Pull complete 
+06d0c5d18ef4: Pull complete 
+cc7973a07a5b: Pull complete 
+Digest: sha256:50c889275d26f816b5314fc99f55425fa76b18fcaf16af255f5d57f09e1f48da
+Status: Downloaded newer image for golang:1.18
+ ---> c37a56a6d654
+Step 2/6 : WORKDIR /app
+ ---> Running in b66ab249aaa4
+Removing intermediate container b66ab249aaa4
+ ---> 5e0684149a5e
+Step 3/6 : COPY service2.go /app
+ ---> b16c9d001069
+Step 4/6 : RUN go build -o service2 /app/service2.go
+ ---> Running in d77d6b1748c0
+Removing intermediate container d77d6b1748c0
+ ---> 59ecc74c13e4
+Step 5/6 : EXPOSE 5001
+ ---> Running in d4ed7a619437
+Removing intermediate container d4ed7a619437
+ ---> ec9f3d35c772
+Step 6/6 : CMD ["./service2"]
+ ---> Running in 171e378010d1
+Removing intermediate container 171e378010d1
+ ---> eb489b7587fd
+Successfully built eb489b7587fd
+Successfully tagged week7_service2:latest
+Building service1
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon   12.8kB
+Step 1/6 : FROM python:3.9
+3.9: Pulling from library/python
+cdd62bf39133: Already exists 
+a47cff7f31e9: Already exists 
+a173f2aee8e9: Already exists 
+01272fe8adba: Already exists 
+bd760507420c: Pull complete 
+c536ab81c8a0: Pull complete 
+b42fbf9dc0a3: Pull complete 
+Digest: sha256:a23efa04a7f7a881151fe5d473770588ef639c08fd5f0dcc6987dbe13705c829
+Status: Downloaded newer image for python:3.9
+ ---> 6fa82efb09a4
+Step 2/6 : WORKDIR /app
+ ---> Running in 632dededd09a
+Removing intermediate container 632dededd09a
+ ---> 7381ac7a7e2d
+Step 3/6 : COPY service1.py /app
+ ---> 899dee4cc0bd
+Step 4/6 : RUN pip install Flask requests
+ ---> Running in e401a20d060d
+Collecting Flask
+  Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 kB 2.2 MB/s eta 0:00:00
+Collecting requests
+  Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 17.2 MB/s eta 0:00:00
+Collecting click>=8.1.3
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 10.2 MB/s eta 0:00:00
+Collecting itsdangerous>=2.1.2
+  Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Collecting importlib-metadata>=3.6.0
+  Downloading importlib_metadata-8.5.0-py3-none-any.whl (26 kB)
+Collecting blinker>=1.6.2
+  Downloading blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Collecting Werkzeug>=3.0.0
+  Downloading werkzeug-3.0.4-py3-none-any.whl (227 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.6/227.6 kB 10.2 MB/s eta 0:00:00
+Collecting Jinja2>=3.1.2
+  Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 8.1 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.10-py3-none-any.whl (70 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 kB 7.9 MB/s eta 0:00:00
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.2.3-py3-none-any.whl (126 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.3/126.3 kB 10.2 MB/s eta 0:00:00
+Collecting certifi>=2017.4.17
+  Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.3/167.3 kB 10.3 MB/s eta 0:00:00
+Collecting charset-normalizer<4,>=2
+  Downloading charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.3/142.3 kB 5.3 MB/s eta 0:00:00
+Collecting zipp>=3.20
+  Downloading zipp-3.20.2-py3-none-any.whl (9.2 kB)
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.5-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Installing collected packages: zipp, urllib3, MarkupSafe, itsdangerous, idna, click, charset-normalizer, certifi, blinker, Werkzeug, requests, Jinja2, importlib-metadata, Flask
+Successfully installed Flask-3.0.3 Jinja2-3.1.4 MarkupSafe-2.1.5 Werkzeug-3.0.4 blinker-1.8.2 certifi-2024.8.30 charset-normalizer-3.3.2 click-8.1.7 idna-3.10 importlib-metadata-8.5.0 itsdangerous-2.2.0 requests-2.32.3 urllib3-2.2.3 zipp-3.20.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.0.1 -> 24.2
+[notice] To update, run: pip install --upgrade pip
+Removing intermediate container e401a20d060d
+ ---> 5fbeab12e9c2
+Step 5/6 : EXPOSE 8199
+ ---> Running in 32991bccf719
+Removing intermediate container 32991bccf719
+ ---> ed882b2ea24f
+Step 6/6 : CMD ["python", "service1.py"]
+ ---> Running in 79f32e5268ad
+Removing intermediate container 79f32e5268ad
+ ---> ecadcbe4086c
+Successfully built ecadcbe4086c
+Successfully tagged week7_service1:latest
+Creating week7_service2_1 ... done
+Creating week7_service1_1 ... done
+Attaching to week7_service2_1, week7_service1_1
+service1_1  |  * Serving Flask app 'service1'
+service1_1  |  * Debug mode: off
+service1_1  | WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+service1_1  |  * Running on all addresses (0.0.0.0)
+service1_1  |  * Running on http://127.0.0.1:8199
+service1_1  |  * Running on http://172.18.0.3:8199
+service1_1  | Press CTRL+C to quit
+
+
+service1_1  | 172.18.0.1 - - [03/Oct/2024 21:42:35] "GET /service1 HTTP/1.1" 200 -

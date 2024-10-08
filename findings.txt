@@ -1,0 +1,13 @@
+In this project, I created two services—Service1 (Python) and Service2 (Go)—using Docker Compose. These containers were analyzed to determine what resources they share with the host system.
+
+File System Sharing
+Each container has its own file system, but certain directories are shared with the host. For example, the /etc/hosts file is mapped, allowing the containers to resolve hostnames for internal communication. Other directories like /dev, /proc, and /sys are also shared, giving the containers access to device files and system information necessary for gathering data such as running processes and uptime.
+
+Network Configuration
+The containers communicate over a Docker bridge network called week7_default. Each container is assigned a unique internal IP—Service1 has 172.18.0.3 and Service2 has 172.18.0.2. Service1 is exposed to the external network on port 8199, making it accessible from outside the Docker environment, while Service2 remains accessible only within the internal Docker network.
+
+Process Isolation
+Processes inside each container are isolated from the host. Running ps -ax inside Service1 shows only processes within that container, like the Python application. The same applies to Service2, where only its own processes are visible. This ensures that the containers are isolated from host processes and other containers.
+
+Resource Sharing
+Containers share the host’s CPU and memory without explicit resource limits. Both containers also share the host’s root disk space, showing a total of 468G available, which is used for storage and temporary files.

@@ -1,0 +1,17 @@
+# Use Go base image
+FROM golang:1.18
+
+# Set working directory
+WORKDIR /app
+
+# Copy the service code into the container
+COPY service2.go /app
+
+# Build the Go application
+RUN go build -o service2 /app/service2.go
+
+# Expose port
+EXPOSE 5001
+
+# Run the service
+CMD ["./service2"]

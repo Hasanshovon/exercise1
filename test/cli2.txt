@@ -1,0 +1,10 @@
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes$ docker container ls
+CONTAINER ID   IMAGE            COMMAND                CREATED         STATUS         PORTS                                       NAMES
+21e91ef1490e   week7_service1   "python service1.py"   9 minutes ago   Up 9 minutes   0.0.0.0:8199->8199/tcp, :::8199->8199/tcp   week7_service1_1
+fe69dbe2852f   week7_service2   "./service2"           9 minutes ago   Up 9 minutes   5001/tcp                                    week7_service2_1
+(base) tanvir@Tanvir:~/Desktop/Docker-and-Kubernetes$ docker network ls
+NETWORK ID     NAME            DRIVER    SCOPE
+fc25b34a7c9f   bridge          bridge    local
+6bf1b4e008fa   host            host      local
+fb718f4e186f   none            null      local
+b8ff3976ef0b   week7_default   bridge    local

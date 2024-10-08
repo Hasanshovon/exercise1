@@ -1,0 +1,17 @@
+# Use Python base image
+FROM python:3.9
+
+# Set working directory
+WORKDIR /app
+
+# Copy the service code into the container
+COPY service1.py /app
+
+# Install required package
+RUN pip install Flask requests
+
+# Expose port
+EXPOSE 8199
+
+# Run the service
+CMD ["python", "service1.py"]
